@@ -28,6 +28,7 @@ import com.fitriadyaa.ultralight.ui.navigation.ScreenPage
 import com.fitriadyaa.ultralight.ui.screen.detail.DetailScreen
 import com.fitriadyaa.ultralight.ui.screen.home.HomeScreen
 import com.fitriadyaa.ultralight.ui.screen.profile.ProfileScreen
+import com.fitriadyaa.ultralight.ui.screen.splash.SplashScreen
 import com.fitriadyaa.ultralight.ui.theme.UltralightTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,7 +42,7 @@ fun UltralightApp(
 
     Scaffold(
         bottomBar = {
-            if (currentRoute != ScreenPage.DetailProduct.route) {
+            if (currentRoute !in listOf(ScreenPage.Splash.route, ScreenPage.DetailProduct.route)) {
                 BottomBar(navController)
             }
         },
@@ -49,9 +50,20 @@ fun UltralightApp(
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = ScreenPage.Home.route,
+            startDestination = ScreenPage.Splash.route,
             modifier = Modifier.padding(innerPadding)
         ) {
+            composable(ScreenPage.Splash.route) {
+                SplashScreen(
+                    navigateToHome = {
+                        navController.navigate(ScreenPage.Home.route) {
+                            popUpTo(navController.graph.id) {
+                                inclusive = true
+                            }
+                        }
+                    }
+                )
+            }
             composable(ScreenPage.Home.route) {
                 HomeScreen(
                     navigateToDetail = { productId ->
