@@ -31,7 +31,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
@@ -76,7 +75,7 @@ fun DetailScreen(
                 )
             }
             is UiState.Error -> {
-                // Handle error if needed
+
             }
         }
     }
@@ -138,17 +137,12 @@ fun DetailContent(
                 Text(
                     text = title,
                     textAlign = TextAlign.Start,
-                    style = MaterialTheme.typography.headlineLarge.copy(
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary
-                    ),
+                    style = MaterialTheme.typography.titleLarge,
                 )
                 Text(
                     text = stringResource(R.string.weight, weight),
-                    style = MaterialTheme.typography.titleLarge.copy(
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.secondary
-                    ),
+
+                    style = MaterialTheme.typography.titleMedium,
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(

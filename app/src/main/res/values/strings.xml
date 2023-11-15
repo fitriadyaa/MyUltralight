@@ -5,7 +5,10 @@
     <string name="detail">Detail Product</string>
     <string name="buy">Buy Now</string>
     <string name="link">Link Buy</string>
-    <string name="profile">Profile</string>
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="name">Fitria Widyani</string>
+    <string name="email">fitrianiwidyaf@gmail.com</string>
+    <string name="buttonText">Open My Portfolio</string>
 </resources>

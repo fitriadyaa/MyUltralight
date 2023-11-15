@@ -33,6 +33,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -104,12 +105,12 @@ fun ProfileContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Fitria Widyani",
+            text = stringResource(R.string.name),
             style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
             modifier = Modifier.padding(bottom = 8.dp)
         )
         Text(
-            text = "fitrianiwidyaf@gmail.com",
+            text = stringResource(R.string.email),
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
             modifier = Modifier.padding(bottom = 16.dp)
@@ -125,7 +126,7 @@ fun ProfileContent() {
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Icon(imageVector = Icons.Filled.PlayArrow, contentDescription = null)
-                Text(text = "Open My Portfolio")
+                Text(text = stringResource(R.string.buttonText),)
             }
         }
         Spacer(modifier = Modifier.height(16.dp))

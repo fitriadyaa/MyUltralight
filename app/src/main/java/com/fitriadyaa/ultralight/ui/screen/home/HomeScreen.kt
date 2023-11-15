@@ -24,12 +24,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.fitriadyaa.ultralight.R
 import com.fitriadyaa.ultralight.di.Injection
 import com.fitriadyaa.ultralight.model.OrderProduct
 import com.fitriadyaa.ultralight.ui.ViewModelFactory
@@ -62,7 +64,7 @@ fun HomeScreen(
         OutlinedTextField(
             value = searchText,
             onValueChange = { searchText = it },
-            label = { Text("Search") },
+            label = { Text(stringResource(R.string.search)) },
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,

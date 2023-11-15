@@ -84,7 +84,7 @@ fun BuyButtonPreview() {
         UltralightTheme {
             BuyButton(
                 text = "Beli Sekarang",
-                url = "https://www.example.com",
+                url = "https://www.fitriadyaa.my.id",
                 navController = navController
             )
         }

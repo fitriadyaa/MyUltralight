@@ -73,7 +73,7 @@ fun ProductItem(
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = stringResource(R.string.weight, weight),
-                style = MaterialTheme.typography.titleSmall,
+                style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.secondary
             )
 
