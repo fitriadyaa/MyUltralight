@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ultralight</string>
+    <string name="weight">%d gr</string>
+    <string name="back">Back</string>
+    <string name="detail">Detail Product</string>
+    <string name="buy">Buy Now</string>
+    <string name="link">Link Buy</string>
+    <string name="profile">Profile</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+</resources>
